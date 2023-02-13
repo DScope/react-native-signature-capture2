@@ -19,8 +19,6 @@
 	BOOL _showBorder;
 	BOOL _showNativeButtons;
 	BOOL _showTitleLabel;
-	UIColor *_backgroundColor;
-	UIColor *_strokeColor;
 }
 
 @synthesize sign;
@@ -31,8 +29,6 @@
 	_showBorder = YES;
 	_showNativeButtons = YES;
 	_showTitleLabel = YES;
-	_backgroundColor = UIColor.whiteColor;
-	_strokeColor = UIColor.blackColor;
 	if ((self = [super init])) {
 		_border = [CAShapeLayer layer];
 		_border.strokeColor = [UIColor blackColor].CGColor;
@@ -69,8 +65,6 @@
 						initWithFrame: CGRectMake(0, 0, screen.width, screen.height)
 						context: _context];
 		sign.manager = manager;
-		sign.backgroundColor = _backgroundColor;
-		sign.strokeColor = _strokeColor;
 
 		[self addSubview:sign];
 
@@ -185,14 +179,6 @@
 	_showTitleLabel = showTitleLabel;
 }
 
-- (void)setBackgroundColor:(UIColor*)backgroundColor {
-	_backgroundColor = backgroundColor;
-}
-
-- (void)setStrokeColor:(UIColor*)strokeColor {
-	_strokeColor = strokeColor;
-}
-
 -(void) onSaveButtonPressed {
 	[self saveImage];
 }
@@ -209,7 +195,10 @@
 
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths firstObject];
-	NSString *tempPath = [documentsDirectory stringByAppendingFormat:@"/signature.png"];
+	NSString * timestamp = [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970]];
+  timestamp = [timestamp stringByAppendingString:@".png"];
+	NSString *tempPath = [documentsDirectory stringByAppendingFormat:@"/signature"];
+  tempPath = [tempPath stringByAppendingString:timestamp];
 
 	//remove if file already exists
 	if ([[NSFileManager defaultManager] fileExistsAtPath:tempPath]) {

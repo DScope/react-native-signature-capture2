@@ -1,35 +1,53 @@
 {
-  "name": "react-native-signature-capture",
-  "version": "0.4.11",
-  "description": "Lets users sign their signatures",
-  "main": "SignatureCapture.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
+  "_args": [
+    [
+      "git+https://github.com/agrass/react-native-signature-capture.git",
+      "/Users/feliperojos/Projects/datascope/datascope"
+    ]
+  ],
+  "_from": "git+https://github.com/agrass/react-native-signature-capture.git",
+  "_id": "react-native-signature-capture@git+https://github.com/agrass/react-native-signature-capture.git#38e586fa2aaa9584d933104e4436d0b67d96b4b2",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/react-native-signature-capture",
+  "_phantomChildren": {},
+  "_requested": {
     "type": "git",
-    "url": "git+https://github.com/RepairShopr/react-native-signature-capture.git"
+    "raw": "git+https://github.com/agrass/react-native-signature-capture.git",
+    "rawSpec": "git+https://github.com/agrass/react-native-signature-capture.git",
+    "saveSpec": "git+https://github.com/agrass/react-native-signature-capture.git",
+    "fetchSpec": "https://github.com/agrass/react-native-signature-capture.git",
+    "gitCommittish": null
   },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/agrass/react-native-signature-capture.git#38e586fa2aaa9584d933104e4436d0b67d96b4b2",
+  "_spec": "git+https://github.com/agrass/react-native-signature-capture.git",
+  "_where": "/Users/feliperojos/Projects/datascope/datascope",
+  "author": {
+    "name": "RepairShopr"
+  },
+  "bugs": {
+    "url": "https://github.com/RepairShopr/react-native-signature-capture/issues"
+  },
+  "description": "Lets users sign their signatures",
+  "homepage": "https://github.com/RepairShopr/react-native-signature-capture#readme",
   "keywords": [
     "react-component",
     "react-native",
     "ios",
     "signature"
   ],
-  "peerDependencies": {
-    "react-native": ">=0.47"
-  },
-  "author": "RepairShopr",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RepairShopr/react-native-signature-capture/issues"
+  "main": "SignatureCapture.js",
+  "name": "react-native-signature-capture",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agrass/react-native-signature-capture.git"
   },
-  "homepage": "https://github.com/RepairShopr/react-native-signature-capture#readme",
-  "dependencies": {
-    "prop-types": "^15.5.10"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "react": "16.13.1",
-    "react-native": "0.63.2"
-  }
+  "version": "0.5.0"
 }
